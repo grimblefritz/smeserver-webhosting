@@ -423,7 +423,7 @@ These parameters will be effective only if the access to the web is allowed for 
             <entry>
         <base>DESC_PHPBASEDIR</base>
         <trans>
-            You must specify the full path to the ibay : /home/e-smith/files/ibays/ibay_name/:/new/path:/other/path 
+            You must specify the full path to the ibay or remove the content to get back to default values : <b>/home/e-smith/files/ibays/ibay_name/:/new/path:/other/path </b>
         </trans>
     </entry>
 </lexicon>
