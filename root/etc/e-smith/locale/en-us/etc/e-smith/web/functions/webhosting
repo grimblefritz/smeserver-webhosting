@@ -414,5 +414,11 @@ These parameters will be effective only if the access to the web is allowed for 
                The maximum upload file size is greater than the maximum post size form
          </trans>
      </entry>
+           <entry>
+	<base>PHPBASEDIR</base>
+        <trans>
+               	Set a different PHPBasedir
+        </trans>
+    </entry>
 </lexicon>
 

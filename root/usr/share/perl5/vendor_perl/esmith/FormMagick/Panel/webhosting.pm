@@ -221,7 +221,9 @@ sub print_ibay_name_field {
             $q->param(-name=>'postmaxsize',-value=>
                 ($rec->prop('PostMaxSize'))); 
             $q->param(-name=>'maxexecutiontime',-value=>
-                ($rec->prop('MaxExecTime')));               
+                ($rec->prop('MaxExecTime')));
+            $q->param(-name=>'phpbasedir',-value=>
+                ($rec->prop('PHPBaseDir')));               
         }
     } else {
         print qq(
@@ -331,6 +333,7 @@ sub modify_ibay {
                 UpMaxFileSize   => $self->cgi->param('uploadmaxfilesize'), 
                 PostMaxSize     => $self->cgi->param('postmaxsize'), 
                 MaxExecTime     => $self->cgi->param('maxexecutiontime'),
+                PHPBaseDir 	    => $self->cgi->param('phpbasedir'),
             );
 
             # Untaint $name before use in system()
