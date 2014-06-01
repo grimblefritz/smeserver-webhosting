@@ -5,7 +5,7 @@ use esmith::Build::CreateLinks qw(:all);
 panel_link("webhosting", "manager");
 
 for  my $event (qw(
-    webhosting-update
+    webhosting-modify
     ))
 {
     templates2events("/etc/httpd/conf/httpd.conf", $event);
