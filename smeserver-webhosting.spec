@@ -1,5 +1,5 @@
 %define name smeserver-webhosting
-%define version 0.0.4
+%define version 0.0.5
 %define release 2 
 
 Name: %{name}

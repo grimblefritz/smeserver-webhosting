@@ -333,9 +333,16 @@ sub modify_ibay {
                 UpMaxFileSize   => $self->cgi->param('uploadmaxfilesize'), 
                 PostMaxSize     => $self->cgi->param('postmaxsize'), 
                 MaxExecTime     => $self->cgi->param('maxexecutiontime'),
-                PHPBaseDir 	    => $self->cgi->param('phpbasedir'),
-            );
-
+                );
+            my $phpbasedir_cgi = $self->cgi->param('phpbasedir');
+            my $phpbasedir_default = "/home/e-smith/files/ibays/$name/";
+                if ($phpbasedir_cgi ne '') 
+                {
+                 $acct->merge_props(   
+                PHPBaseDir 	    => $phpbasedir_default . ':' . $phpbasedir_cgi),
+                  );
+                }
+                
             # Untaint $name before use in system()
             $name =~ /(.+)/; $name = $1;
             if (system ("/sbin/e-smith/signal-event", "webhosting-modify", 
