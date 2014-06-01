@@ -10,11 +10,12 @@ Summary: allow to change php/apache settings to ibays, only yet for sme9
 Group:	SMEserver/addon
 License: GNU GPL version 2	
 URL:		 http://www.contribs.org
-Source0:	 %{name}-%{version}.tar.gz
-BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
-
+Source:	 %{name}-%{version}.tar.gz
+BuildRoot: %{_tmppath}/%{name}-buildroot
+BuildArchitectures: noarch
 BuildRequires:	e-smith-devtools
 Requires:	e-smith-release >= 9.0
+AutoReqProv: no
 
 %description
 allow to change php/apache settings to ibays, only yet for sme9
