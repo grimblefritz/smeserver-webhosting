@@ -158,7 +158,12 @@ __DATA__
         <field type="text" id="phpbasedir">
             <label>PHPBASEDIR</label>
         </field>
-
+               <field
+            type="literal"
+            id="phpbasedirdesc"
+            value="">
+            <description>DESC_PHPBASEDIR</description>
+       </field>
         <subroutine src="print_save_or_add_button()" />
     </page>
  
