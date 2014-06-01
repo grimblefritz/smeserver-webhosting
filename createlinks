@@ -2,7 +2,7 @@
 
 use esmith::Build::CreateLinks qw(:all);
 
-panel_link("denyhosts", "manager");
+panel_link("webhosting", "manager");
 
 for  my $event (qw(
     webhosting-update
