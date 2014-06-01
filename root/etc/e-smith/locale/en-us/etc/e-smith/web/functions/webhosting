@@ -417,7 +417,7 @@ These parameters will be effective only if the access to the web is allowed for 
            <entry>
 	<base>PHPBASEDIR</base>
         <trans>
-               	Set a different PHPBasedir
+               	Set other PHPBasedir : /home/e-smith/files/ibays/ibay_name/:/new/path:/other/path
         </trans>
     </entry>
 </lexicon>
