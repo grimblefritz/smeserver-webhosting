@@ -139,7 +139,7 @@ __DATA__
                          
                     <label>UPLOADMAXFILESIZE</label>
        </field> 
-           <field type="select" 
+           <field type="select" validation="validate_up_post"
                 id="postmaxsize"
                 options="'disabled' => 'DEFAULT','20M' => 'S0020MB', '30M' => 'S0030MB', '40M' => 'S0040MB', '50M' => 'S0050MB',
                          '75M' => 'S0075MB', '100M' => 'S0100MB', '125M' => 'S0125MB', '150M' => 'S0150MB', '175M' => 'S0175MB',
