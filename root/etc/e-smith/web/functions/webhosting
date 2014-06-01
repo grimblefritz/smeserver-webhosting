@@ -1,0 +1,164 @@
+#!/usr/bin/perl -wT
+
+# vim: ft=xml ts=4 sw=4 et:
+#----------------------------------------------------------------------
+# heading     : Collaboration
+# description : Web Hosting
+# navigation  : 2000 2500
+# 
+# Copyright (c) 2001 Mitel Networks Corporation 
+# 		2014 stephane de Labrusse <stephdl@de-labrusse.fr>
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# 		
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 		
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
+# 
+# Technical support for this program is available from e-smith, inc.
+# Please visit our web site www.e-smith.com for details.
+#----------------------------------------------------------------------
+
+use strict;
+use esmith::FormMagick::Panel::webhosting;
+
+my $fm = esmith::FormMagick::Panel::webhosting->new();
+$fm->display();
+
+=pod
+
+=head1 NAME
+
+webhosting -- manage php and apache settings
+
+=head2 DESCRIPTION
+
+This screen allows the administrator to manage information bays.
+
+=begin testing
+
+use esmith::FormMagick::Tester;
+use esmith::TestUtils;
+use esmith::TestUtils;
+use esmith::ConfigDB;
+use esmith::AccountsDB;
+
+my $panel = $Original_File;
+my $ua = esmith::FormMagick::Tester->new();
+
+my $c = esmith::ConfigDB->open();
+my $a = esmith::AccountsDB->open();
+
+is  (mode($panel), '4750',              "Check permissions on script");
+ok  ($ua->get_panel($panel),            "ABOUT TO RUN L10N TESTS");
+is  ($ua->{status}, 200,                "200 OK");
+#like($ua->{content}, qr/FORM_TITLE/,    "Saw untranslated form title");
+ok  ($ua->set_language("en"),           "Set language to English");
+ok  ($ua->get_panel($panel),            "Get panel");
+is  ($ua->{status}, 200,                "200 OK");
+like($ua->{content}, qr/Information bays/, "Saw translated form title");
+
+ok  ($ua->get_panel($panel),            "ABOUT TO TEST CREATING IBAY");
+ok  ($ua->follow("Click here"),         "Follow 'create ibay' link");
+is  ($ua->{status}, 200,                "200 OK");
+like($ua->{content}, qr/Create a new information bay/,   "Saw page title");
+like($ua->{content}, qr/Brief description/,    "Saw description field");
+like($ua->{content}, qr/Group/,                "Saw group field");
+like($ua->{content}, qr/User access via file/, "Saw user access field");
+like($ua->{content}, qr/Public access via/,    "Saw Public access field");
+like($ua->{content}, qr/Add/,                  "Saw add button");
+
+SKIP: {
+
+    skip 10, "Unsafe!" unless destruction_ok();
+
+    ok  ($ua->follow("Click here"),         "ACTUALLY ADDING A NETWORK");
+    $ua->field();
+    $ua->click("Add");
+    like($ua->{content}, qr/Successfully added ibay/,  "Saw success message");
+
+    ok  ($ua->follow("Remove"),         "REMOVING NETWORK");
+    like($ua->{content}, qr/Are you sure/,  "Saw confirmation message");
+    $ua->click("Remove");
+    like($ua->{content}, qr/Successfully deleted/,  "Saw success message");
+
+}
+
+
+=cut
+
+__DATA__
+<form title="FORM_TITLE" header="/etc/e-smith/web/common/head.tmpl" footer="/etc/e-smith/web/common/foot.tmpl">
+    <page name="First" pre-event="print_status_message()">
+         <title>FIRSTPAGE_DESC</title>
+        <subroutine src="print_ibay_table()" />
+    </page>
+    <page name="CreateModify" pre-event="turn_off_buttons()" post-event="handle_ibays()">
+
+        <title>ADD_TITLE</title>
+        <subroutine src="print_ibay_name_field()" />
+ 
+        <field type="select" id="indexes" value="enabled" options="'disabled' => 'DISABLED', 'enabled' => 'ENABLED'">
+            <label>INDEXES</label>
+        </field>
+        <field type="select" id="followSymLinks" options="'disabled' => 'DISABLED', 'enabled' => 'ENABLED'">
+           <label>FOLLOWSYMLINKS</label>
+        </field>
+          <field type="select" id="allowOverride" value="None" options="'None' => 'DISABLED', 'All' => 'ENABLED'">
+            <label>ALLOWOVERRIDE</label>
+        </field> 
+               <field
+            type="literal"
+            id="phpdesc"
+            value="">
+            <description>DESC_PHP_SETTINGS</description>
+       </field>
+        <field type="select" id="allowUrlfOpen" options="'disabled' => 'DISABLED', 'enabled' => 'ENABLED'">
+            <label>ALLOWURLFOPEN</label>
+        </field> 
+       <field type="select" 
+                id="memorylimit" 
+                options="'disabled' => 'DEFAULT', '64M' => 'M0064MB', '128M' => 'M0128MB',
+                         '256M' => 'M0256MB', '512M' => 'M0512MB', '768M' => 'M0768MB','1024M' => 'M1024MB'">
+                    <label>MEMORYLIMIT</label>
+       </field>   
+         <field type="select" 
+                id="uploadmaxfilesize"
+                options="'disabled' => 'DEFAULT','20M' => 'S0020MB', '30M' => 'S0030MB', '40M' => 'S0040MB', '50M' => 'S0050MB',
+                         '75M' => 'S0075MB', '100M' => 'S0100MB', '125M' => 'S0125MB', '150M' => 'S0150MB', '175M' => 'S0175MB',
+                         '200M' => 'S0200MB', '300M' => 'S0300MB','400M' => 'S0400MB', '500M' => 'S0500MB', '600M' => 'S0600MB',
+                         '700M' => 'S0700MB', '800M' => 'S0800MB', '900M' => 'S0900MB', '1000M' => 'S1000MB', '1250M' => 'S1250MB',
+                         '1500M' => 'S1500MB', '1750M' => 'S1750MB', '1999M' => 'S2000MB'">
+                         
+                    <label>UPLOADMAXFILESIZE</label>
+       </field> 
+           <field type="select" 
+                id="postmaxsize"
+                options="'disabled' => 'DEFAULT','20M' => 'S0020MB', '30M' => 'S0030MB', '40M' => 'S0040MB', '50M' => 'S0050MB',
+                         '75M' => 'S0075MB', '100M' => 'S0100MB', '125M' => 'S0125MB', '150M' => 'S0150MB', '175M' => 'S0175MB',
+                         '200M' => 'S0200MB', '300M' => 'S0300MB','400M' => 'S0400MB', '500M' => 'S0500MB', '600M' => 'S0600MB',
+                         '700M' => 'S0700MB', '800M' => 'S0800MB', '900M' => 'S0900MB', '1000M' => 'S1000MB', '1250M' => 'S1250MB',
+                         '1500M' => 'S1500MB', '1750M' => 'S1750MB', '1999M' => 'S2000MB'">
+                    <label>POSTMAXSIZE</label>
+       </field>              
+            <field type="select" 
+                id="maxexecutiontime"
+                options="'disabled' => 'DEFAULT', '60' => 'T001m', '120' => 'T002m', '180' => 'T003m', '240' => 'T004m', '300' => 'T005m',
+                         '360' => 'T006m', '420' => 'T007m', '480' => 'T008m', '540' => 'T009m', '600' => 'T010m', '900' => 'T015m',
+                         '1800' => 'T030m', '2700' => 'T045m', '3600' => 'T060m', '7200' => 'T120m', 'unlimited' => 'UNLIMITED'">
+                    <label>MAXEXECUTIONTIME</label>
+       </field>                                   
+        
+
+        <subroutine src="print_save_or_add_button()" />
+    </page>
+ 
+</form>
+

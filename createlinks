@@ -1,0 +1,14 @@
+#!/usr/bin/perl -w
+
+use esmith::Build::CreateLinks qw(:all);
+
+panel_link("denyhosts", "manager");
+
+for  my $event (qw(
+    webhosting-update
+    ))
+{
+    templates2events("/etc/httpd/conf/httpd.conf", $event);
+    safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-e-smith");
+}
+
