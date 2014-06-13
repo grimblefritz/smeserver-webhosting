@@ -1,6 +1,6 @@
 %define name smeserver-webhosting
-%define version 0.0.5
-%define release 2 
+%define version 0.0.6
+%define release 1 
 
 Name: %{name}
 Version: %{version}	
@@ -15,6 +15,7 @@ BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArchitectures: noarch
 BuildRequires:	e-smith-devtools
 Requires:	e-smith-release >= 9.0
+Requires: smeserver-mod_dav
 AutoReqProv: no
 
 %description
@@ -46,6 +47,9 @@ rm -rf %{name}-%{version}
 %defattr(-,root,root)
 
 %changelog
+* Fri Jun 13 2004 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.6-1.sme
+- Add mod dav in dependency with an option enabled/disabled
+
 * Sun Jun 01 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.01-1
 - Initial Release
  

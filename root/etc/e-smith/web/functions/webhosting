@@ -114,6 +114,18 @@ __DATA__
           <field type="select" id="allowOverride" value="None" options="'None' => 'DISABLED', 'All' => 'ENABLED'">
             <label>ALLOWOVERRIDE</label>
         </field> 
+
+        <field
+            type="literal"
+            id="DAVdesc"
+            value="">
+            <description>DESC_DAV_SETTINGS</description>
+        </field>
+
+        <field type="select" id="modDav" options="'disabled' => 'DISABLED', 'enabled' => 'ENABLED'">
+            <label>ENABLE_MOD_DAV</label>
+        </field>
+
                <field
             type="literal"
             id="phpdesc"

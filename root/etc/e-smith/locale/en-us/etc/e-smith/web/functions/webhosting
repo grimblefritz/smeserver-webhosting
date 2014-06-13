@@ -22,7 +22,7 @@
     <entry>
         <base>NAME_FIELD_DESC</base>
         <trans>
-These parameters will be effective only if the access to the web is allowed for the concerned ibay in the informations bays panel.
+These parameters will be effective only if the access to the web is allowed for the concerned i-bay in the informations bays panel.
         </trans>
     </entry>
     <entry>
@@ -81,13 +81,13 @@ These parameters will be effective only if the access to the web is allowed for 
      <entry>
         <base>DESC_HTTP_SETTINGS</base>
         <trans>
-            The following settings control the access of this ibay using the HTTP/HTTPS protocol.
+            The following settings control the access of this i-bay using the HTTP/HTTPS protocol.
         </trans>
     </entry>
         <entry>
         <base>DESC_PHP_SETTINGS</base>
         <trans>
-            The following settings control the PHP values of this ibay.
+            The following settings control the PHP values of this i-bay.
         </trans>
     </entry>
     <entry>
@@ -423,7 +423,19 @@ These parameters will be effective only if the access to the web is allowed for 
             <entry>
         <base>DESC_PHPBASEDIR</base>
         <trans>
-            You must specify the full path to the ibay or remove the content to get back to default values : /home/e-smith/files/ibays/ibay_name/:/new/path:/other/path
+            You must specify the full path to the i-bay or remove the content to get back to default values : /home/e-smith/files/ibays/ibay_name/:/new/path:/other/path
+        </trans>
+    </entry>
+        <entry>
+        <base>DESC_DAV_SETTINGS</base>
+        <trans>
+            The following settings control the WebDav files transfer protocol of this i-bay.
+        </trans>
+    </entry>
+    <entry>
+        <base>ENABLE_MOD_DAV</base>
+        <trans>
+        Allow WebDav
         </trans>
     </entry>
 </lexicon>

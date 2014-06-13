@@ -223,7 +223,9 @@ sub print_ibay_name_field {
             $q->param(-name=>'maxexecutiontime',-value=>
                 ($rec->prop('MaxExecTime')));
             $q->param(-name=>'phpbasedir',-value=>
-                ($rec->prop('PHPBaseDir')));               
+                ($rec->prop('PHPBaseDir')));
+            $q->param(-name=>'modDav',-value=>
+                ($rec->prop('ModDav')));                  
         }
     } else {
         print qq(
@@ -334,7 +336,7 @@ sub modify_ibay {
                 PostMaxSize     => $self->cgi->param('postmaxsize'), 
                 MaxExecTime     => $self->cgi->param('maxexecutiontime'),
                 PHPBaseDir 	    => $self->cgi->param('phpbasedir'),
-
+                ModDav   	    => $self->cgi->param('modDav'),
             );
 
             # Untaint $name before use in system()
