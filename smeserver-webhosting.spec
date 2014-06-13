@@ -47,7 +47,7 @@ rm -rf %{name}-%{version}
 %defattr(-,root,root)
 
 %changelog
-* Fri Jun 13 2004 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.6-1.sme
+* Fri Jun 13 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.6-1.sme
 - Add mod dav in dependency with an option enabled/disabled
 
 * Sun Jun 01 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.01-1
