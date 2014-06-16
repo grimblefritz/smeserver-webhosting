@@ -5,11 +5,13 @@
         <base>FORM_TITLE</base>
         <trans>
                Hebergement Web des I-bays
-</trans>
-<entry>
-<base>Ibays Web Hosting</base>
-<trans>I-bays - paramètres Web</trans>
-</entry> 
+        </trans>
+    </entry> 
+    <entry>
+       <base>webhosting</base>
+        <trans>
+               I-bays - paramètres Web
+        </trans>
     </entry>
     <entry>
         <base>FIRSTPAGE_DESC</base>
@@ -26,7 +28,7 @@
     <entry>
         <base>NAME_FIELD_DESC</base>
         <trans>
-Ces paramètres ne seront effectives que si l'accès par Internet est autorisé pour l'i-bay concernés dans son panneau de configuration.
+Ces paramètres ne seront effectifs que si l'accès par Internet est autorisé pour l'i-bay concernée dans son panneau de configuration.
         </trans>
     </entry>
     <entry>
