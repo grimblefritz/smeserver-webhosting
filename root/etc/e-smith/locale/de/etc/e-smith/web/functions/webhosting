@@ -26,7 +26,7 @@
     <entry>
         <base>NAME_FIELD_DESC</base>
         <trans>
-         Die folgenden Parameter sind nur dann relevant, wenn für die betroffene i-bay der öffentliche Zugang über das Web erlaubt ist.
+         Die folgenden Parameter sind nur dann relevant, wenn fÃ¼r die betroffene i-bay der Ã¶ffentliche Zugang Ã¼ber das Web erlaubt ist.
         </trans>
     </entry>
     <entry>
@@ -62,14 +62,14 @@
     <entry>
         <base>VIRTUAL_HOST_MESSAGE</base>
         <trans>
-         Die folgenden virtuellen Domains hab en diese i-bay als Inhalt verwendet. Diese werden nun auf die Primary i-bay zeigen. (Sie können das jederzeit wieder über das Domain-Panel verändern.)
+         Die folgenden virtuellen Domains hab en diese i-bay als Inhalt verwendet. Diese werden nun auf die Primary i-bay zeigen. (Sie kÃ¶nnen das jederzeit wieder Ã¼ber das Domain-Panel verÃ¤ndern.)
         </trans>
     </entry>
     <entry>
         <base>VHOST_MESSAGE</base>
         <trans>
             <![CDATA[
-            <P>Die folgenden virtuellen Domains hab en diese i-bay als Inhalt verwendet. Diese werden nun auf die Primary i-bay zeigen. (Sie können das jederzeit wieder über das Domain-Panel verändern) :</P>
+            <P>Die folgenden virtuellen Domains hab en diese i-bay als Inhalt verwendet. Diese werden nun auf die Primary i-bay zeigen. (Sie kÃ¶nnen das jederzeit wieder Ã¼ber das Domain-Panel verÃ¤ndern) :</P>
             <ul>{$vhostList}</ul>
             ]]>
         </trans>
@@ -87,7 +87,7 @@
         <entry>
         <base>DESC_PHP_SETTINGS</base>
         <trans>
-         Die folgenden Einstellungen kontrollieren die Werte der PHP.ini für diese i-bay.
+         Die folgenden Einstellungen kontrollieren die Werte der PHP.ini fÃ¼r diese i-bay.
         </trans>
     </entry>
     <entry>
@@ -111,7 +111,7 @@
     <entry>
         <base>ALLOWURLFOPEN</base>
         <trans>
-        Erlaube den Zugriff auf Dateien außerhalb der i-bay (url fopen)
+        Erlaube den Zugriff auf Dateien auÃŸerhalb der i-bay (url fopen)
         </trans>
     </entry>
   <entry>
@@ -393,37 +393,37 @@
        <entry>
         <base>UPLOADMAXFILESIZE</base>
         <trans>
-        Maximale Dateigröße für den Upload (upload_max_filesize)
+        Maximale DateigrÃ¶ÃŸe fÃ¼r den Upload (upload_max_filesize)
         </trans>
     </entry>
        <entry>
         <base>POSTMAXSIZE</base>
         <trans>
-        Maximale POST Größe (post_max_size)
+        Maximale POST GrÃ¶ÃŸe (post_max_size)
         </trans>
     </entry>
        <entry>
         <base>MAXEXECUTIONTIME</base>
         <trans>
-        Maximale Verarbeitsungszeit für Scripts (max_execution_time)
+        Maximale Verarbeitsungszeit fÃ¼r Scripts (max_execution_time)
         </trans>
     </entry>
       <entry>
     <base>UPLOADMAXFILESIZE_IS_GREATER_THAN_POSTMAXSIZE</base>
         <trans>
-        Die maximale Dateigröße für den Upload ist größer als es die maximale Verarbeitsungszeit für Scripts erlaubt.
+        Die maximale DateigrÃ¶ÃŸe fÃ¼r den Upload ist grÃ¶ÃŸer als es die maximale Verarbeitsungszeit fÃ¼r Scripts erlaubt.
          </trans>
      </entry>
            <entry>
 	<base>PHPBASEDIR</base>
         <trans>
-        Pfad(e) für das Basisverzeichnis von PHP (PHPBasedir)
+        Pfad(e) fÃ¼r das Basisverzeichnis von PHP (PHPBasedir)
         </trans>
     </entry>
             <entry>
         <base>DESC_PHPBASEDIR</base>
         <trans>
-         Geben Sie entweder den vollen Pfad zum relevanten Ziel an oder kehren sie durch eine leere Zeile zum Wert der Grundeinstellung zurück: /home/e-smith/files/ibays/ibay_name/:/new/path:/other/path
+         Geben Sie entweder den vollen Pfad zum relevanten Ziel an oder kehren sie durch eine leere Zeile zum Wert der Grundeinstellung zurÃ¼ck: /home/e-smith/files/ibays/ibay_name/:/new/path:/other/path
         </trans>
     </entry>
         <entry>
