@@ -1,5 +1,5 @@
 %define name smeserver-webhosting
-%define version 0.0.7
+%define version 0.0.8
 %define release 1 
 
 Name: %{name}
@@ -47,7 +47,7 @@ rm -rf %{name}-%{version}
 %defattr(-,root,root)
 
 %changelog
-* Mon Jun 16 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.7-1.sme
+* Mon Jun 16 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.8-1.sme
 - add german translation, thanks to Rudolf Vielnascher
 - add french translation, thanks to me :)
 

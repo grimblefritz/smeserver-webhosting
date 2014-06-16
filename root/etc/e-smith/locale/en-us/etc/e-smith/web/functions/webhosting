@@ -397,7 +397,7 @@ These parameters will be effective only if the access from the web is allowed fo
        <entry>
         <base>UPLOADMAXFILESIZE</base>
         <trans>
-        Maximum upload size upload_max_filesize)
+        Maximum upload size (upload_max_filesize)
         </trans>
     </entry>
        <entry>
