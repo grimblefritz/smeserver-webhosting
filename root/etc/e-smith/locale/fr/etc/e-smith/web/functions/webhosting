@@ -1,127 +1,123 @@
 <!-- vim: ft=xml ts=4 sw=8 noet:
 -->
-<lexicon lang="en-us">
+<lexicon lang="fr">
     <entry>
         <base>FORM_TITLE</base>
         <trans>
-               Web Hosting Contrib
+               Hebergement Web des I-bays
 </trans>
-    </entry>
 <entry>
 <base>Ibays Web Hosting</base>
-<trans>I-bays - Web Hosting</trans>
+<trans>I-bays - paramètres Web</trans>
 </entry> 
+    </entry>
     <entry>
         <base>FIRSTPAGE_DESC</base>
         <trans>
-         Manage Apache and PHP settings
+         Gérer les paramètres système d'Apache et de PHP
         </trans>
     </entry>
     <entry>
         <base>ADD_TITLE</base>
         <trans>
-            Modify Apache and PHP Settings.
+            Modifier les paramètres d'Apache and de PHP.
         </trans>
     </entry>
     <entry>
         <base>NAME_FIELD_DESC</base>
         <trans>
-These parameters will be effective only if the access from the web is allowed for the concerned I-bay in the informations bays panel.
+Ces paramètres ne seront effectives que si l'accès par Internet est autorisé pour l'i-bay concernés dans son panneau de configuration.
         </trans>
     </entry>
     <entry>
         <base>NAME_LABEL</base>
         <trans>
-            Information bay name
+            Nom de l'I-bay
         </trans>
     </entry>
     <entry>
         <base>NO_IBAYS</base>
         <trans>
-            There are no I-bays currently configured.
+            Il n'y a pas d'I-bay configuré.
         </trans>
     </entry>
     <entry>
         <base>CANT_FIND_IBAY</base>
         <trans>
-            Can't find account for {$name} (does it exist?)
+            Nous ne pouvons pas trouver l'I-bay {$name} (Existe t'elle?)
         </trans>
     </entry>
     <entry>
         <base>ERROR_WHILE_MODIFYING_IBAY</base>
         <trans>
-            An error occurred while modifying the I-bay.
+             Une erreur s'est produite lors de la modification de l'i-bay.
         </trans>
     </entry>
     <entry>
         <base>SUCCESSFULLY_MODIFIED_IBAY</base>
         <trans>
-            Successfully modified I-bay.
+            L'I-bay a été modifié avec succès.
         </trans>
     </entry>
     <entry>
         <base>VIRTUAL_HOST_MESSAGE</base>
         <trans>
-            The following virtual domains were using this information
-            bay as their content and will be changed to the primary web 
-            site (you can change them to something else afterward).
+            Les domaines virtuels suivants utilisent cette I-bay pour stocker leur contenu et seront changés sur le site Web principal vous pouvez les utiliser pour autre chose par la suite).
         </trans>
     </entry>
     <entry>
         <base>VHOST_MESSAGE</base>
         <trans>
             <![CDATA[
-            <P>The following virtual domains were using this information bay 
-                as their content and will be changed to the primary web site 
-                (you can change them to something else afterward):</P>
+            <P>Les domaines virtuels suivants utilisent cette I-bay pour leur contenu et seront changés sur le site Web principal (vous pouvez les utiliser pour autre chose par la suite):</P>
             <ul>{$vhostList}</ul>
             ]]>
         </trans>
     </entry>
     <entry>
         <base>Information bays</base>
-        <trans>Information bays</trans>
+        <trans>I-bays</trans>
     </entry>
      <entry>
         <base>DESC_HTTP_SETTINGS</base>
         <trans>
-            The following settings control the access of this I-bay using the HTTP/HTTPS protocol.
+            Les paramètres suivants permettent de contrôler l'accès de cette I-bay en utilisant le protocole HTTP/HTTPS.
         </trans>
     </entry>
         <entry>
         <base>DESC_PHP_SETTINGS</base>
         <trans>
-            The following settings control the PHP values of this I-bay.
+            Les paramètres suivants fixent les limites d'utilisation du serveur WEB par PHP dans cette I-bay.
         </trans>
     </entry>
     <entry>
         <base>INDEXES</base>
         <trans>
-        Allow directory listing (+Indexes)
+        permettre de lister les répertoire (+Indexes)
         </trans>
     </entry>
     <entry>
         <base>FOLLOWSYMLINKS</base>
         <trans>
-        Follow symbolic links (FollowSymLinks)
+        Suivre les liens symboliques (FollowSymLinks)
         </trans>
     </entry>
     <entry>
         <base>ALLOWOVERRIDE</base>
         <trans>
-        Allow .htaccess policy (AllowOverride)
+        Autoriser l'utilisation des .htaccess (AllowOverride)
         </trans>
    </entry>
     <entry>
         <base>ALLOWURLFOPEN</base>
         <trans>
-        Allow access to remote files (Allow_url_fopen)
+        permettre l'accès à distance aux fichiers (allow_url_fopen)
         </trans>
     </entry>
   <entry>
         <base>DEFAULT</base>
         <trans>
-        Default value
+        Valeur Par défaut
         </trans>
     </entry>
         <entry>
@@ -241,19 +237,19 @@ These parameters will be effective only if the access from the web is allowed fo
        <entry>
         <base>T060m</base>
         <trans>
-        One hour
+        Une heure
         </trans>
     </entry>
     <entry>
         <base>T120m</base>
         <trans>
-        Two hours
+        Deux heures
         </trans>
     </entry>
      <entry>
         <base>UNLIMITED</base>
         <trans>
-        Unlimited
+        Illimité
         </trans>
     </entry>
       <entry>
@@ -391,55 +387,55 @@ These parameters will be effective only if the access from the web is allowed fo
       <entry>
         <base>MEMORYLIMIT</base>
         <trans>
-        Php memory limit (memory_limit)
+        Limite maximale de mémoire (memory_limit)
         </trans>
     </entry>
        <entry>
         <base>UPLOADMAXFILESIZE</base>
         <trans>
-        Maximum upload size upload_max_filesize)
+        Taille maximale de téléversement (upload_max_filesize)
         </trans>
     </entry>
        <entry>
         <base>POSTMAXSIZE</base>
         <trans>
-        Maximum post size (post_max_size)
+        Taille maximale des formulaires de téléversement (post_max_size)
         </trans>
     </entry>
        <entry>
         <base>MAXEXECUTIONTIME</base>
         <trans>
-        Maximum execution time (max_execution_time)
+        Durée maximale d'éxecution (max_execution_time)
         </trans>
     </entry>
       <entry>
     <base>UPLOADMAXFILESIZE_IS_GREATER_THAN_POSTMAXSIZE</base>
         <trans>
-               The maximum upload file size is greater than the maximum post size form
+               La taille Maximale de téléversement est plus grande que la taille maximale des formulaires de téléversement.
          </trans>
      </entry>
            <entry>
 	<base>PHPBASEDIR</base>
         <trans>
-               Enter Path(s) for PHP Scripts (PHPBasedir) 
+               Saississez une arborescence d'execution pour les scripts PHP (PHPBasedir)
         </trans>
     </entry>
             <entry>
         <base>DESC_PHPBASEDIR</base>
         <trans>
-            You must specify the full path to the I-bay or remove the content to get back to default values : /home/e-smith/files/ibays/ibay_name/:/new/path:/other/path
+            Vous devez spécifier le chemin d'accès complet à l'I-bay où supprimer le contenu pour revenir aux valeurs par défaut : /home/e-smith/files/ibays/ibay_name/:/nouveau/chemin:/autre/chemin
         </trans>
     </entry>
         <entry>
         <base>DESC_DAV_SETTINGS</base>
         <trans>
-            The following settings control the WebDav files transfer protocol of this I-bay.
+            Vous pouvez autoriser le protocole de transfert de fichier WebDav pour cette I-bay.
         </trans>
     </entry>
     <entry>
         <base>ENABLE_MOD_DAV</base>
         <trans>
-        Allow WebDav
+        Autoriser WebDav
         </trans>
     </entry>
 </lexicon>

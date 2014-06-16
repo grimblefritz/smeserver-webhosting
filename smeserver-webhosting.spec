@@ -1,5 +1,5 @@
 %define name smeserver-webhosting
-%define version 0.0.6
+%define version 0.0.7
 %define release 1 
 
 Name: %{name}
@@ -47,6 +47,10 @@ rm -rf %{name}-%{version}
 %defattr(-,root,root)
 
 %changelog
+* Mon Jun 16 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.7-1.sme
+- add german translation, thanks to Rudolf Vielnascher
+- add french translation, thanks to me :)
+
 * Fri Jun 13 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.6-1.sme
 - Add mod dav in dependency with an option enabled/disabled
 
