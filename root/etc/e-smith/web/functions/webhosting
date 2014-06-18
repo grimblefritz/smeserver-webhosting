@@ -167,7 +167,7 @@ __DATA__
                          '1800' => 'T030m', '2700' => 'T045m', '3600' => 'T060m', '7200' => 'T120m', 'unlimited' => 'UNLIMITED'">
                     <label>MAXEXECUTIONTIME</label>
        </field>                                   
-        <field type="text" id="phpbasedir">
+        <field type="text" id="phpbasedir" size="80" >
             <label>PHPBASEDIR</label>
         </field>
                <field

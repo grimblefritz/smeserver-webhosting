@@ -1,5 +1,5 @@
 %define name smeserver-webhosting
-%define version 0.0.8
+%define version 0.0.9
 %define release 1 
 
 Name: %{name}
@@ -47,6 +47,9 @@ rm -rf %{name}-%{version}
 %defattr(-,root,root)
 
 %changelog
+* Wed Jun 18 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.9-1.sme
+- added a box larger for writing the phpbasedir
+
 * Mon Jun 16 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.8-1.sme
 - add german translation, thanks to Rudolf Vielnascher
 - add french translation, thanks to me :)
