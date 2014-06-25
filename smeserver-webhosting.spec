@@ -47,7 +47,7 @@ rm -rf %{name}-%{version}
 %defattr(-,root,root)
 
 %changelog
-- Wed Jun 25 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.10-1.sme
+* Wed Jun 25 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.10-1.sme
 - now the Primary Ibay can be modified by smeserver-webhosting
 
 * Wed Jun 18 2014 Stephane de Labrusse <stephdl@de-labrusse.fr> -0.0.9-1.sme
