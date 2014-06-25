@@ -133,7 +133,7 @@ sub print_ibay_table {
     foreach my $i (@ibays) 
     {
         my $ibayname = $i->key();
-        my $ibaydesc = $i->prop('Name');
+        #my $ibaydesc = $i->prop('Name');# I Want that the ibay primary is now modifiable.
 
         my $modifiable = $i->prop('Modifiable') || 'yes';
 
@@ -144,11 +144,11 @@ sub print_ibay_table {
         my $href = "$scriptname?$params&action=modify&wherenext=";
 
         my $actionModify = '&nbsp;';
-        if ($modifiable eq 'yes')
-        {
+        
+        
 	    $actionModify .= $q->a({href => "${href}CreateModify"},$modify)
                       . '&nbsp;';
-        }
+        
 
  
         print $q->Tr (
