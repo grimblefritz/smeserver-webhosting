@@ -144,7 +144,7 @@ sub print_ibay_table {
         my $href = "$scriptname?$params&action=modify&wherenext=";
 
         my $actionModify = '&nbsp;';
-        if ($modifiable eq 'yes')
+        if (($modifiable eq 'yes')||($modifiable eq 'no'))
         {
 	    $actionModify .= $q->a({href => "${href}CreateModify"},$modify)
                       . '&nbsp;';
