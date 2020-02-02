@@ -226,6 +226,12 @@ sub print_ibay_name_field {
                 ($rec->prop('PHPBaseDir')));
             $q->param(-name=>'modDav',-value=>
                 ($rec->prop('ModDav')));                  
+	    $q->param(-name=>'wwwstatus',-value=>
+                (($rec->prop('WWW') || 'enabled')));
+            $q->param(-name=>'ftpstatus',-value=>
+                (($rec->prop('FTP') || 'enabled')));
+            $q->param(-name=>'smbstatus',-value=>
+                (($rec->prop('SMB') || 'enabled')));
         }
     } else {
         print qq(
@@ -337,7 +343,10 @@ sub modify_ibay {
                 MaxExecTime     => $self->cgi->param('maxexecutiontime'),
                 PHPBaseDir 	    => $self->cgi->param('phpbasedir'),
                 ModDav   	    => $self->cgi->param('modDav'),
-            );
+                WWW             => $self->cgi->param('wwwstatus'),
+                FTP             => $self->cgi->param('ftpstatus'),
+                SMB             => $self->cgi->param('smbstatus'),
+	    );
 
             # Untaint $name before use in system()
             $name =~ /(.+)/; $name = $1;
