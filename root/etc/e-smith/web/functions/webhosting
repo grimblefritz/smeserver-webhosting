@@ -176,6 +176,21 @@ __DATA__
             value="">
             <description>DESC_PHPBASEDIR</description>
        </field>
+       <field
+            type="literal"
+            id="sharedesc"
+            value="">
+            <description>DESC_SHARE_SETTINGS</description>
+       </field>
+        <field type="select" id="wwwstatus" options="'disabled' => 'DISABLED', 'enabled' => 'ENABLED'">
+            <label>WWWSTATUS</label>
+        </field>
+        <field type="select" id="ftpstatus" options="'disabled' => 'DISABLED', 'enabled' => 'ENABLED'">
+            <label>FTPSTATUS</label>
+        </field>
+        <field type="select" id="smbstatus" options="'disabled' => 'DISABLED', 'enabled' => 'ENABLED'">
+            <label>SMBSTATUS</label>
+        </field>
         <subroutine src="print_save_or_add_button()" />
     </page>
  
