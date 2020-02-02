@@ -442,5 +442,29 @@ These parameters will be effective only if the access from the web is allowed fo
         Allow WebDav
         </trans>
     </entry>
+    <entry>
+        <base>DESC_SHARE_SETTINGS</base>
+       <trans>
+       The following settings enable/disable the WWW virtual host, FTP file transfer, and SMB file sharing for this I-bay.
+       </trans>
+    </entry>
+    <entry>
+        <base>WWWSTATUS</base>
+       <trans>
+       WWW virtual hosts for this I-bay
+       </trans>
+    </entry>
+    <entry>
+        <base>FTPSTATUS</base>
+       <trans>
+       FTP file transfer for this I-bay
+       </trans>
+    </entry>
+    <entry>
+        <base>SMBSTATUS</base>
+       <trans>
+       SMB file sharing for this I-bay
+       </trans>
+    </entry>
 </lexicon>
 
